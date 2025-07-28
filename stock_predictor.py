@@ -59,8 +59,4 @@ if __name__ == "__main__":
     # Step 3: Aggregate
     port_return = calculate_portfolio_return(predictions, portfolio)
     print(f"\nPredicted portfolio return for tomorrow: {port_return:.2%}")
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/yo-phone-linging/stonk-trader-v1.git
-git push -u origin main
+
