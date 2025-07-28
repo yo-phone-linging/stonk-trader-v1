@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 from joblib import dump, load
 
 def get_stock_data(ticker, start="2020-01-01", end=None):
-    df = yf.download(ticker, start=start, end=end)
+    df = yf.download(ticker, start=start, end=end, auto_adjust=False)
     df['Return'] = df['Adj Close'].pct_change().shift(-1)
     df['SMA_5'] = df['Adj Close'].rolling(5).mean()
     df['SMA_10'] = df['Adj Close'].rolling(10).mean()
